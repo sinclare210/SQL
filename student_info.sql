@@ -156,7 +156,7 @@ SELECT
         WHEN ROUND(SUM(c.credit_hours * e.grade_points) / SUM(c.credit_hours), 2) >= 2.0 
             THEN 'Third Class'
         ELSE 'Pass/Fail'
-    END AS classification
+    END AS class
 FROM students s
 JOIN enrollments e ON s.student_id = e.student_id
 JOIN courses c ON e.course_id = c.course_id
