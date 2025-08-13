@@ -128,7 +128,7 @@ SELECT
         SUM(c.credit_hours * e.grade_points) / SUM(c.credit_hours), 
         2
     ) AS gpa,
-    'First Class' AS classification
+    'First Class' AS class
 FROM students s
 JOIN enrollments e ON s.student_id = e.student_id
 JOIN courses c ON e.course_id = c.course_id
